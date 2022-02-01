@@ -31,11 +31,11 @@ def LV(x,params):
 
 def RK4(f, x0, t0, tf, dt):
     
-    t = np.arrange(t0, tf, dt)
-    nt = t.size(t0)
+    t = np.arange(t0, tf, dt)
+    nt = t.size
     
-    nx = x0.size(t0)
-    x = np.zeroes((nx,nt))
+    nx = x0.size
+    x = np.zeros((nx,nt))
     
     x[:,0] = x0
     
@@ -62,11 +62,13 @@ x0 = np.array([20,5])                 # initial condition
 
 # Solving the problem
 
-t0 = 0                 # time unit is second
+t0 = 0                                # time unit is second
 tf = 70
 dt = 0.01
 
 x, t = RK4(f, x0, t0, tf, dt)
 
 
+
+# Plotting the Results
 
