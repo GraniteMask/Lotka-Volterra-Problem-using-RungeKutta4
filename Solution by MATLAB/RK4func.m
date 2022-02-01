@@ -7,7 +7,10 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     
              So in the application part, 
              1) t_(n+1) is reperesent by t
-             2)
+             2) x_(n+1) is represented by x(:,k+1)
+             3) x_n is represented by x(:,k)
+             4) 1/6*(K1+K2+K3+K4) is represented by dx
+             5) K1+K2+K3+K4 is represented by is represented by dx
     
         %}
     
