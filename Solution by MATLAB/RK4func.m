@@ -13,10 +13,11 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     
              So in the application part, 
              1) t_(n+1) is reperesented by t
-             2) x_(n+1) is represented by x(:,k+1)
-             3) x_n is represented by x(:,k)
-             4) 1/6*(K1+K2+K3+K4) is represented by dx
-             5) k1+k2+k3+k4 is represented by is represented by k1,k2,k3,k4
+             2) t_n is reperesented by t(k)
+             3) x_(n+1) is represented by x(:,k+1)
+             4) x_n is represented by x(:,k)
+             5) 1/6*(K1+K2+K3+K4) is represented by dx
+             6) k1+k2+k3+k4 is represented by is represented by k1,k2,k3,k4
     
         %}
     
@@ -34,7 +35,9 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     for k = 1:nt-1
        
         k1 = dt*f(t(k), x(:,k));
-        k2 = dt*f(t(k) + dt/2, x(:,k) + k1/2)
+        k2 = dt*f(t(k) + dt/2, x(:,k) + k1/2);
+        k3 = dt*f(t(k) + dt/2, x(:,k) + k2/2);
+        k4 = dt*f(t(k) + dt, x(:,k) + k3);
         
         dx=(k1 + 2*k2 + 2*k3 +k4)/6;
         x(:,k+1) = x(:,k) + dx;   
