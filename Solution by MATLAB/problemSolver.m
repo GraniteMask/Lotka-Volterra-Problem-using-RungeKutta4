@@ -12,7 +12,7 @@ x0 =[20; 5];
 %% SOLVING THE PROBLEM
 
 t0 = 0;
-tf = 10;
+tf = 70;
 dt = 0.01;
 
 [x, t] = RK4func(f, x0, t0, tf, dt);
