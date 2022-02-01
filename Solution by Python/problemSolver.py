@@ -9,6 +9,9 @@ Created on Wed Feb  2 02:56:21 2022
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+
+
 # Defining the General Model
 
 def LV(x,params):
@@ -21,6 +24,8 @@ def LV(x,params):
     xdot = np.array([alpha*x[0] - beta*x[0]*x[1], delta*x[0]*x[1] - gamma*x[2]])
     
     return xdot
+
+
 
 # Defining the Runge Kutta 4 Method
 
@@ -45,3 +50,10 @@ def RK4(f, x0, t0, tf, dt):
     
     return x, t
     
+
+# Defining the problem
+
+params = {"alpha": 1.1, "beta": 0.4, "gamma": 0.4, "delta": 0.1}
+
+f= lambda t,x : LV(x, params)                      # lambda is an anonymous function which can take may inputs but returns one output. Same case is with MATLAB denoted by @.
+x0 = np.array([20,5])
