@@ -24,10 +24,10 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     
     %% RUNGE KUTTA 4 APPLICATION USING A LOOP
     
-    nt = numel(t);  % nt= number of the time points, numel=number of elements
-    nx = numel(x0);
-    
     t = t0:dt:tf;   % It means time vector is from t0 to tf with increasing time step of dt
+    nt = numel(t);  % nt= number of the time points, numel=number of elements
+    
+    nx = numel(x0);
     x= nan(nx,nt);   % An array with all NaN values which has nx rows and nt columns
     
     x(:,1)=x0;
