@@ -39,7 +39,7 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
         k3 = dt*f(t(k) + dt/2, x(:,k) + k2/2);
         k4 = dt*f(t(k) + dt, x(:,k) + k3);
         
-        dx=(k1 + 2*k2 + 2*k3 +k4)/6;
+        dx=(k1 + 2*k2 + 2*k3 +k4)/6;      % since k2, k3 represent a more precise expression of current and next state, these two entitites have twice as k1 and k4
         x(:,k+1) = x(:,k) + dx;   
         
     end
