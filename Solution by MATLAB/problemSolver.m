@@ -16,3 +16,11 @@ tf = 10;
 dt = 0.01;
 
 [x, t] = RK4func(f, x0, t0, tf, dt);
+
+%% PLOTTING THE RESULTS
+
+figure;
+plot(t, x);
+legend('Preys', 'Predators');
+xlabel('Time(t)');
+grid on;
