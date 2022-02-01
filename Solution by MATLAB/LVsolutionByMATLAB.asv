@@ -1,5 +1,0 @@
-function xdot = LV(t, x) % t=time variable, x=state variable
-
-    alpha = 1.
-
-end
