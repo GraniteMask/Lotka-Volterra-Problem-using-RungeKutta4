@@ -14,7 +14,7 @@ alpha = 1.1;
 
 % or we can write 
 
-function xdot = LV(x, params)
+function xdot = LVFunc(x, params)
    
     alpha = params.alpha;
     beta = params.beta;
