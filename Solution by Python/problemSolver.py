@@ -72,3 +72,18 @@ x, t = RK4(f, x0, t0, tf, dt)
 
 # Plotting the Results
 
+plt.subplot(1, 2, 1)
+plt.plot(t, x[0,:], "r", label="Preys")
+plt.plot(t, x[1,:], "b", label="Predators")
+plt.xlabel("Time (t)")
+plt.grid()
+plt.legend()
+
+plt.subplot(1, 2, 2)
+plt.plot(x[0,:], x[1,:])
+plt.xlabel("Preys")
+plt.ylabel("Predators")
+plt.grid()
+
+plt.show()
+
