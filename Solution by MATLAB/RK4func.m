@@ -4,5 +4,5 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     nx = numel(x0);
     
     t = t0:dt:tf;   % It means time vector is from t0 to tf with increasing time step of dt
-    x= nan(nx,nt)
+    x= nan(nx,nt)   % An array with all NaN values which has nx rows and nt columns
 end
