@@ -10,7 +10,7 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
              2) x_(n+1) is represented by x(:,k+1)
              3) x_n is represented by x(:,k)
              4) 1/6*(K1+K2+K3+K4) is represented by dx
-             5) K1+K2+K3+K4 is represented by is represented by dx
+             5) K1+K2+K3+K4 is represented by is represented by k1,k2,k3,k4
     
         %}
     
@@ -23,11 +23,13 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     t = t0:dt:tf;   % It means time vector is from t0 to tf with increasing time step of dt
     x= nan(nx,nt);   % An array with all NaN values which has nx rows and nt columns
     
-    x(:,1)=x2;
+    x(:,1)=x0;
 
     for k = 1:nt-1
        
         k1 = dt*f(t(k), x(:,k));
+        k2 = dt*f(t(k) + dt/2, x(:,k) + k1/2)
+        
         dx=(k1 + 2*k2 + 2*k3 +k4)/6;
         x(:,k+1) = x(:,k) + dx;   
         
