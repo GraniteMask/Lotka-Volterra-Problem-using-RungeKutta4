@@ -66,6 +66,7 @@ t0 = 0                 # time unit is second
 tf = 70
 dt = 0.01
 
+x, t = RK4(f, x0, t0, tf, dt)
 
 
 
