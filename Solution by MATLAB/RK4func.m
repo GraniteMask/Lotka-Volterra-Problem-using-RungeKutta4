@@ -4,5 +4,29 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     nx = numel(x0);
     
     t = t0:dt:tf;   % It means time vector is from t0 to tf with increasing time step of dt
-    x= nan(nx,nt)   % An array with all NaN values which has nx rows and nt columns
+    x= nan(nx,nt);   % An array with all NaN values which has nx rows and nt columns
+    
+    x(:,1)=x2;
+
+    
+    
+    %% RUNGE KUTTA FORMULA
+    
+        %{ 
+             x_(n+1) = x_n + 1/6*(K1+K2+K3+K4)
+             t_(n+1) = t_n + h    for n=0,1,2,3,...
+    
+             So in the application part, 
+             
+        %}
+    
+    %% RUNGE KUTTA 4 APPLICATION USING A LOOP
+    
+    for k = 1:nt-1
+       
+        k1 = dt*f(t(k), x(:,k));
+        dx=(k1 + 2*k2 + 2*k3 +k4)/6;
+        x(:,k+1) = x(:,k) + dx;   
+        
+    end
 end
