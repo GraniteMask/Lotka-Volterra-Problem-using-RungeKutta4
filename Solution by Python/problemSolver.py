@@ -21,7 +21,7 @@ def LV(x,params):
     gamma = params['gamma']
     delta = params['delta']
     
-    xdot = np.array([alpha*x[0] - beta*x[0]*x[1], delta*x[0]*x[1] - gamma*x[2]])
+    xdot = np.array([alpha*x[0] - beta*x[0]*x[1], delta*x[0]*x[1] - gamma*x[1]])
     
     return xdot
 
