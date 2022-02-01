@@ -2,15 +2,21 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     %% RUNGE KUTTA FORMULA
     
         %{ 
-             x_(n+1) = x_n + 1/6*(K1+K2+K3+K4)
+             x_(n+1) = x_n + 1/6*(k1+k2+k3+k4)
              t_(n+1) = t_n + h    for n=0,1,2,3,...
+                
+             where,
+             k1 = f(t_n,x_n)
+             k2 = h*f(t_n + h/2, x_n + k1/2)
+             k3 = h*f(t_n + h/2, x_n + k2/2)
+             k4 = h*f(t_n + h, x_n + k3)
     
              So in the application part, 
-             1) t_(n+1) is reperesent by t
+             1) t_(n+1) is reperesented by t
              2) x_(n+1) is represented by x(:,k+1)
              3) x_n is represented by x(:,k)
              4) 1/6*(K1+K2+K3+K4) is represented by dx
-             5) K1+K2+K3+K4 is represented by is represented by k1,k2,k3,k4
+             5) k1+k2+k3+k4 is represented by is represented by k1,k2,k3,k4
     
         %}
     
