@@ -1,5 +1,19 @@
 function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equation system, x0=initial condition, t0=initial time, tf=final time, dt=sample time
-
+    %% RUNGE KUTTA FORMULA
+    
+        %{ 
+             x_(n+1) = x_n + 1/6*(K1+K2+K3+K4)
+             t_(n+1) = t_n + h    for n=0,1,2,3,...
+    
+             So in the application part, 
+             1) t_(n+1) is reperesent by t
+             2)
+    
+        %}
+    
+    
+    %% RUNGE KUTTA 4 APPLICATION USING A LOOP
+    
     nt = numel(t);  % nt= number of the time points, numel=number of elements
     nx = numel(x0);
     
@@ -8,20 +22,6 @@ function [x,t] = RK4(f, x0, t0, tf, dt) % f=function describing differential equ
     
     x(:,1)=x2;
 
-    
-    
-    %% RUNGE KUTTA FORMULA
-    
-        %{ 
-             x_(n+1) = x_n + 1/6*(K1+K2+K3+K4)
-             t_(n+1) = t_n + h    for n=0,1,2,3,...
-    
-             So in the application part, 
-             
-        %}
-    
-    %% RUNGE KUTTA 4 APPLICATION USING A LOOP
-    
     for k = 1:nt-1
        
         k1 = dt*f(t(k), x(:,k));
