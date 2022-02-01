@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
+# Details about the variables and Runge Kutta method 4 are already written in the RK4func.m file under solution by MATLAB folder.
 
 # Defining the General Model
 
@@ -55,5 +55,17 @@ def RK4(f, x0, t0, tf, dt):
 
 params = {"alpha": 1.1, "beta": 0.4, "gamma": 0.4, "delta": 0.1}
 
-f= lambda t,x : LV(x, params)                      # lambda is an anonymous function which can take may inputs but returns one output. Same case is with MATLAB denoted by @.
-x0 = np.array([20,5])
+f= lambda t,x : LV(x, params)         # lambda is an anonymous function which can take may inputs but returns one output. Same case is with MATLAB denoted by @.
+x0 = np.array([20,5])                 # initial condition    
+
+
+
+# Solving the problem
+
+t0 = 0                 # time unit is second
+tf = 70
+dt = 0.01
+
+
+
+
