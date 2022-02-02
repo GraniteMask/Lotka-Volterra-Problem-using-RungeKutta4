@@ -1,6 +1,10 @@
 # Solution of Lotka Volterra Problem using Runge Kutta 4
 
+This project demonstrate the graphical solution for the Lotka-Volterra Equations using Runge-Kutta-4 method. MATLAB and Python both have been used to find the graphical solution.
+
 ## Runge-Kutta-4 (RK4) method Basics:
+
+*Runge-Kutta-4 is the most widely known member of Runge-Kutta family, used for the approximate solution of ordinary differential equations (ODE).*
 
 ### Mathematical Equations:
 
@@ -33,11 +37,11 @@ where,
 5) 1/6*(K1+K2+K3+K4) is represented by dx
 6) k1+k2+k3+k4 is represented by is represented by k1,k2,k3,k4
 
-***NOTE: All other important notes are written alongside the code itself in their respective files***
+***NOTE: All other important notes are written alongside the code itself in their respective files.***
 
 ## Lotka-Volterra Basics:
 
-**The Lotka-Volterra equations or prey-predator equations, are a pair of first-order non-linear differential equations, used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey.**
+*The Lotka-Volterra equations or prey-predator equations, are a pair of first-order non-linear differential equations, used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey.*
 
 ### Mathematical Equations:
 
@@ -45,4 +49,22 @@ where,
 dx/dt = α*x - β*x*y
 dy/dt = δ*x*y - γ*y
 ```
+### Representation in MATLAB Code:
+
+```
+xdot = [alpha*x(1) - beta*x(1)*x(2)
+            delta*x(1)*x(2) - gamma*x(2)];
+```
+
+### Representation in Python Code:
+
+```
+xdot = np.array([alpha*x[0] - beta*x[0]*x[1], delta*x[0]*x[1] - gamma*x[1]])
+```
+
+***NOTE: Please see the coding files for more information regarding the application part of Lotka-Volterra***
+
+## Graphical Results:
+
+
 
