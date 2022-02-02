@@ -2,12 +2,13 @@
 
 ## Runge Kutta 4 Basics:
 
-### Formula:
+### Mathematical Equations:
 
+```
 x_(n+1) = x_n + 1/6*(k1+k2+k3+k4)
 
 t_(n+1) = t_n + h    for n=0,1,2,3,...
-
+```
 where,
 1) k1 = f(t_n,x_n)
 2) k2 = h*f(t_n + h/2, x_n + k1/2)
@@ -34,6 +35,12 @@ where,
 
 ***NOTE: All other important notes are written alongside the code itself in their respective files***
 
-## Runge Kutta 4 Basics:
+## Lotka-Volterra Equations:
 
+**The Lotka-Volterra equations or prey-predator equations, are a pair of first-order non-linear differential equations, used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey.**
 
+### Mathematical Equations:
+
+```
+dx/dy
+```
