@@ -10,7 +10,6 @@ This project demonstrate the graphical solution for the Lotka-Volterra Equations
 
 ```
 x_(n+1) = x_n + 1/6*(k1+k2+k3+k4)
-
 t_(n+1) = t_n + h    for n=0,1,2,3,...
 
 where,
@@ -66,5 +65,12 @@ xdot = np.array([alpha*x[0] - beta*x[0]*x[1], delta*x[0]*x[1] - gamma*x[1]])
 
 ## Graphical Results:
 
+### MATLAB Plot Result:
 
+![MATLAB PLOT RESULT](https://github.com/GraniteMask/Lotka-Volterra-Problem-using-RungeKutta4/blob/master/plotResultsMatlab.jpg?raw=true)
 
+### Python Plot Result:
+
+![PYTHON PLOT RESULT](https://github.com/GraniteMask/Lotka-Volterra-Problem-using-RungeKutta4/blob/master/plotResultsPython.png?raw=true)
+
+*Both plots are approximately same as both python and MATLAB codes have same initial conditions*
