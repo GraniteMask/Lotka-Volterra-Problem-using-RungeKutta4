@@ -1,6 +1,6 @@
 # Solution of Lotka Volterra Problem using Runge Kutta 4
 
-This project demonstrate the graphical solution for the Lotka-Volterra Equations using Runge-Kutta-4 method. MATLAB and Python both have been used to find the graphical solution.
+This project demonstrates the graphical solution for the Lotka-Volterra Equations using Runge-Kutta-4 method. MATLAB and Python both have been used to find the graphical solution.
 
 ## Runge-Kutta-4 (RK4) method Basics:
 
